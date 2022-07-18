@@ -8,3 +8,5 @@
 # Starts the web application on port 8080
 mvn spring-boot:run
 ```
+
+You can use Swagger UI at http://localhost:8080/api/swagger-ui.html.
