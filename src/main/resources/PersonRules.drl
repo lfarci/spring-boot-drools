@@ -1,0 +1,8 @@
+import com.loganfarci.examples.drools.Person;
+
+rule "Minors have no clearance"
+    when
+        person : Person(age < 18);
+    then
+        person.setClearanceNumber(-1);
+end;
