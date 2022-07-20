@@ -1,0 +1,21 @@
+@startuml
+
+actor "End user" as endUser
+actor "Administrator" as admin
+
+component "Business Application" as service
+component "Database" as db
+
+component "Business Central Workbench" as businessCentral
+component "KIE Execution Server" as runtime
+
+
+endUser --> service
+admin --> businessCentral: Develop business rules
+
+businessCentral --> runtime: Deploy
+
+service -(0- runtime: REST
+service -(0- db: JDBC
+
+@enduml
